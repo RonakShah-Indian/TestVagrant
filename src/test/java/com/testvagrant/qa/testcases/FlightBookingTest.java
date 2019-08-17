@@ -2,6 +2,7 @@ package com.testvagrant.qa.testcases;
 
 import com.testvagrant.qa.base.TestBase;
 import com.testvagrant.qa.pages.ClearTripScreen;
+import com.testvagrant.qa.pages.Locators;
 import com.testvagrant.qa.util.TestUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -32,14 +33,14 @@ public class FlightBookingTest extends TestBase {
         clearTripScreen.fromTag.sendKeys("Bangalore");
         waitForLoading();
 
-        List<WebElement> originOptions = driver.findElement(By.id("ui-id-1")).findElements(By.tagName("li"));
+        List<WebElement> originOptions = driver.findElement(By.id(Locators.ClearTripScreen.ORIGIN_OPTION)).findElements(By.tagName("li"));
         originOptions.get(0).click();
 
         clearTripScreen.toTag.clear();
         clearTripScreen.toTag.sendKeys("Delhi");
         waitForLoading();
         //select the first item from the destination auto complete list
-        List<WebElement> destinationOptions = driver.findElement(By.id("ui-id-2")).findElements(By.tagName("li"));
+        List<WebElement> destinationOptions = driver.findElement(By.id(Locators.ClearTripScreen.DESTINATION_OPTION)).findElements(By.tagName("li"));
         destinationOptions.get(0).click();
 
         clearTripScreen.datePicker.click();
