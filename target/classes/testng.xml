@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Automation Test Suite">
+	<test name="Test Vagrant Coding Test">
+		<classes>
+			<class name="com.testvagrant.qa.testcases.FlightBookingTest"></class>
+			<class name="com.testvagrant.qa.testcases.HotelBookingTest"></class>
+			<class name="com.testvagrant.qa.testcases.SignInTest"></class>
+		</classes>
+	</test>
+</suite>
